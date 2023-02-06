@@ -15,7 +15,7 @@
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Arial",
+		"default_fontname" : "JetBrainsMono Nerd Font Mono",
 		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"gridsnaponopen" : 1,
@@ -48,7 +48,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 8.0, 81.0, 622.666666666666515, 165.0 ],
-					"presentation_linecount" : 14,
 					"text" : "2023. Matthew Dunlap\n      Outputs RGB values as MIDI control change messages.\n      First parameter is the MIDI channel to use (0-15)\n\n      cc# 1 = red LSB\n          2 = red MSB\n          3 = green LSB\n          4 = green MSB\n          5 = blue LSB\n          6 = blue MSB",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -65,7 +64,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 8.0, 9.0, 622.666666666666515, 70.0 ],
-					"presentation_linecount" : 3,
 					"text" : "dunlap.midiColors",
 					"textcolor" : [ 1.0, 0.309803921568627, 0.980392156862745, 1.0 ]
 				}
@@ -79,8 +77,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 293.0, 923.0, 182.0, 22.0 ],
-					"text" : "list: cc# val",
+					"patching_rect" : [ 288.0, 911.0, 182.0, 22.0 ],
+					"text" : "raw midi out",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -95,7 +93,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 193.0, 264.0, 182.0, 54.0 ],
-					"presentation_linecount" : 2,
 					"text" : "list: red green blue; each value is 0-255 range",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -117,13 +114,13 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "list: cc# val",
+					"comment" : "raw midi out",
 					"id" : "obj-65",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 247.666666666666515, 919.0, 30.0, 30.0 ],
+					"patching_rect" : [ 247.666666666666515, 907.0, 30.0, 30.0 ],
 					"tricolor" : [ 0.985541701316833, 0.009453415870667, 0.999180555343628, 1.0 ]
 				}
 
@@ -135,7 +132,7 @@
 					"numinlets" : 7,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 313.999999999999545, 828.0, 82.0, 22.0 ],
+					"patching_rect" : [ 313.999999999999545, 828.0, 106.0, 24.0 ],
 					"text" : "midiformat #1"
 				}
 
@@ -150,7 +147,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 508.333333333333258, 601.0, 18.0, 49.0 ],
+					"patching_rect" : [ 508.333333333333258, 601.0, 23.0, 56.0 ],
 					"text" : "join 6",
 					"textcolor" : [ 0.780392156862745, 0.815686274509804, 0.0, 1.0 ]
 				}
@@ -160,11 +157,12 @@
 				"box" : 				{
 					"color" : [ 0.0, 0.301960784313725, 0.815686274509804, 1.0 ],
 					"id" : "obj-40",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 399.333333333333258, 455.0, 33.0, 22.0 ],
+					"patching_rect" : [ 399.333333333333258, 455.0, 33.0, 40.0 ],
 					"text" : ">> 4"
 				}
 
@@ -173,11 +171,12 @@
 				"box" : 				{
 					"color" : [ 0.0, 0.301960784313725, 0.815686274509804, 1.0 ],
 					"id" : "obj-42",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 474.333333333333258, 455.0, 40.0, 22.0 ],
+					"patching_rect" : [ 474.333333333333258, 455.0, 40.0, 40.0 ],
 					"text" : "& 127"
 				}
 
@@ -186,11 +185,12 @@
 				"box" : 				{
 					"color" : [ 0.0, 0.694117647058824, 0.180392156862745, 1.0 ],
 					"id" : "obj-36",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 247.666666666666515, 450.0, 33.0, 22.0 ],
+					"patching_rect" : [ 247.666666666666515, 450.0, 33.0, 40.0 ],
 					"text" : ">> 4"
 				}
 
@@ -199,11 +199,12 @@
 				"box" : 				{
 					"color" : [ 0.0, 0.694117647058824, 0.180392156862745, 1.0 ],
 					"id" : "obj-38",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 325.0, 454.0, 40.0, 22.0 ],
+					"patching_rect" : [ 325.0, 454.0, 40.0, 40.0 ],
 					"text" : "& 127"
 				}
 
@@ -212,11 +213,12 @@
 				"box" : 				{
 					"color" : [ 1.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-30",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 90.0, 450.0, 33.0, 22.0 ],
+					"patching_rect" : [ 90.0, 450.0, 33.0, 40.0 ],
 					"text" : ">> 4"
 				}
 
@@ -225,11 +227,12 @@
 				"box" : 				{
 					"color" : [ 1.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-21",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 164.0, 450.0, 40.0, 22.0 ],
+					"patching_rect" : [ 164.0, 450.0, 40.0, 40.0 ],
 					"text" : "& 127"
 				}
 
@@ -243,7 +246,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 325.0, 355.0, 305.666666666666515, 22.0 ],
+					"patching_rect" : [ 325.0, 355.0, 305.666666666666515, 24.0 ],
 					"text" : "unjoin 3",
 					"textcolor" : [ 0.886274509803922, 0.0, 1.0, 1.0 ]
 				}
@@ -259,7 +262,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 105.0, 555.0, 241.0, 133.0 ],
-					"presentation_linecount" : 8,
 					"text" : "color will require use to chunk out nibbles of data lsb first:\n r = nib1 + nib2\n g = nib3 + nib4\n b = nib5 + nib6\n\neach nibble number above corresponds to a midi cc number",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -272,7 +274,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 231.0, 741.0, 182.0, 22.0 ],
+					"patching_rect" : [ 231.0, 741.0, 270.0, 24.0 ],
 					"text" : "1 $1, 2 $2, 3 $3, 4 $4, 5 $5, 6 $6"
 				}
 
